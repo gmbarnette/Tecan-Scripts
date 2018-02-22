@@ -1,0 +1,38 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             >	
+<Grid Background = "#FFE57A37">
+  <Grid.RowDefinitions>
+  	<RowDefinition Height = "*" />
+	<RowDefinition Height = "*" />
+  </Grid.RowDefinitions>
+
+  <Image  Grid.Row = "0" Width = "200" Height = "150" VerticalAlignment = "Top" HorizontalAlignment = "Right" Source = "C:/TouchToolsData/XAML File Browser/GSAF Logo.jpg" />
+  <DockPanel VerticalAlignment="Top" HorizontalAlignment = "Center" LastChildFill="True" Grid.Row = "2">
+      <TextBlock DockPanel.Dock="Top" Margin = "5,0,0,0" Height ="50" FontSize = "30" HorizontalAlignment = "Center">How Many Worklists would you like to use for Pooling?</TextBlock>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              
+            </Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+			  <RowDefinition />
+			  
+			</Grid.RowDefinitions>
+	   	  
+		  
+		  <ComboBox xmlns:custom="clr-namespace:Tecan.RUP.DefaultControls.AttachedProperties;assembly=Tecan.RUP.DefaultControls"
+            custom:AttachedUIProperties.VariableName="numOfWorklists" Width = "100">
+			<ComboBoxItem Content = "1" />
+			<ComboBoxItem Content = "2" />
+		  </ComboBox>
+            
+          </Grid>
+		  
+          
+ 
+  </DockPanel>
+</Grid>
+</UserControl>
